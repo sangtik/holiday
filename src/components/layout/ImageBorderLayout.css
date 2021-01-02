@@ -1,0 +1,91 @@
+.layout {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+.border_top {
+    display: flex;
+    background-color: blue;
+    flex: 0 1 auto;
+    min-height: 30px;
+}
+
+.border_top_left {
+    background : url('../../resources/images/edge.png') no-repeat center/contain;
+    flex: 0 1 auto;
+    min-width: 30px;
+    min-height: 30px;
+}
+
+.border_top_center {
+    background : url('../../resources/images/horizen_pattern.png') repeat-x center/contain;
+    flex: 1 1 auto;
+}
+
+.border_top_right {
+    background : url('../../resources/images/edge.png') no-repeat center/contain;
+    transform: rotate( 90deg );
+    flex: 0 1 auto;
+    min-width: 30px;
+    min-height: 30px;
+}
+
+.border_middle {
+    display: flex;
+    background-color: red;
+    flex: 18;
+}
+
+.border_middle_left {
+    background : url('../../resources/images/vertical_pattern.png') repeat-y center/contain;
+    transform: rotate( 180deg );
+    flex: 0 1 auto;
+    min-width: 30px;
+}
+
+.border_middle_center {
+    background-color: lightgrey;
+    flex: 1 1 auto;
+}
+
+.border_middle_right {
+    background : url('../../resources/images/vertical_pattern.png') repeat-y center/contain;
+    flex: 0 1 auto;
+    min-width: 30px;
+}
+
+.border_bottom {
+    display: flex;
+    background-color: green;
+    flex: 0 1 auto;
+    min-height: 30px;
+}
+
+.border_bottom_left {
+    background : url('../../resources/images/edge.png') no-repeat center/contain;
+    flex: 0 1 auto;
+    transform: rotate( 270deg );
+    min-width: 30px;
+    min-height: 30px;
+}
+
+.border_bottom_center {
+    background : url('../../resources/images/horizen_pattern.png') repeat-x center/contain;
+    transform: rotate( 180deg );
+    flex: 1 1 auto;
+    padding-bottom: 10px;
+}
+
+.border_bottom_right {
+    background : url('../../resources/images/edge.png') no-repeat center/contain;
+    flex: 0 1 auto;
+    transform: rotate( 180deg );
+    min-width: 30px;
+    min-height: 30px;
+}
