@@ -1,0 +1,23 @@
+/*.box{*/
+
+/*}*/
+
+/*.box div:nth-of-type(1) {*/
+
+/*}*/
+
+/*.box input{*/
+/*    margin-left: 2%;*/
+/*}*/
+
+/*.box input:nth-of-type(1) {*/
+/*    background-color: lightgoldenrodyellow;*/
+/*    max-width: 200px;*/
+/*    font-size: 1.5rem;*/
+/*    border: 2px solid lightgoldenrodyellow;*/
+/*    outline: none;*/
+/*}*/
+
+/*.box > input:active, input:focus {*/
+/*    border: 2px solid darkkhaki;*/
+/*}*/

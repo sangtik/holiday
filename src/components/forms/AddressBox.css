@@ -1,0 +1,35 @@
+.address-container{
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.address-container > div:nth-child(1) {
+    display: inline-flex;
+}
+
+.address-container > div:nth-child(2) {
+
+}
+
+.address-container > div:nth-child(1) > button {
+
+}
+
+.address-container > div:nth-child(1) > input {
+
+}
+
+
+
+/*.box input{*/
+/*    margin-left: 2%;*/
+/*}*/
+
+/*.addressBox button{*/
+/*    margin-left: 2%;*/
+/*}*/
+
+/*.addressBox > input:active, input:focus {*/
+/*    border: 2px solid darkkhaki;*/
+/*}*/

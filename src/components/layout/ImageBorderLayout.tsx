@@ -10,24 +10,24 @@ const ImageBorderLayout: React.FC<ImageBorderLayoutProps> = ({
 }) => {
   return (
     <div className="layout">
-      <div className="border_top">
-        <div className="border_top_left" />
-        <div className="border_top_center" />
-        <div className="border_top_right" />
+      <div className="border-top">
+        <div className="border-top-left" />
+        <div className="border-top-center" />
+        <div className="border-top-right" />
       </div>
 
-      <div className="border_middle">
-        <div className="border_middle_left" />
-        <div className="border_middle_center">
+      <div className="border-middle">
+        <div className="border-middle-left" />
+        <div className="border-middle-center">
           {children}
         </div>
-        <div className={"border_middle_right"} />
+        <div className={"border-middle-right"} />
       </div>
 
-      <div className="border_bottom">
-        <div className="border_bottom_left" />
-        <div className="border_bottom_center" />
-        <div className="border_bottom_right" />
+      <div className="border-bottom">
+        <div className="border-bottom-left" />
+        <div className="border-bottom-center" />
+        <div className="border-bottom-right" />
       </div>
     </div>
   );

@@ -11,3 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: 'VITRO Core';
+  font-style: normal;
+  font-weight: 100;
+  src: url("./style/fonts/vitro-core.woff2") format('woff2'),
+  url("./style/fonts/vitro-core.woff") format('woff'),
+  url("./style/fonts/vitro-core.otf") format('truetype')
+}
+
+@font-face {
+  font-family: 'VITRO Pride';
+  font-style: normal;
+  font-weight: 100;
+  src: url("./style/fonts/vitro-pride.woff2") format('woff2'),
+  url("./style/fonts/vitro-pride.woff") format('woff'),
+  url("./style/fonts/vitro-pride.otf") format('truetype')
+}

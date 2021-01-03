@@ -1,0 +1,14 @@
+.label-container{
+
+}
+
+.label-container > div > label {
+    white-space: pre-wrap;
+}
+
+.label-container > div {
+    display: inline-block;
+    text-align: center;
+    width: 20%;
+    margin-left: 5%;
+}
