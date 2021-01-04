@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/holiday/static/css/main.ff33f1ba.chunk.css",
-    "main.js": "/holiday/static/js/main.c5dab432.chunk.js",
-    "main.js.map": "/holiday/static/js/main.c5dab432.chunk.js.map",
+    "main.js": "/holiday/static/js/main.a8fab3d1.chunk.js",
+    "main.js.map": "/holiday/static/js/main.a8fab3d1.chunk.js.map",
     "runtime-main.js": "/holiday/static/js/runtime-main.2a4d3e83.js",
     "runtime-main.js.map": "/holiday/static/js/runtime-main.2a4d3e83.js.map",
     "static/js/2.1bacfe5f.chunk.js": "/holiday/static/js/2.1bacfe5f.chunk.js",
@@ -13,12 +13,15 @@
     "static/css/main.ff33f1ba.chunk.css.map": "/holiday/static/css/main.ff33f1ba.chunk.css.map",
     "static/js/2.1bacfe5f.chunk.js.LICENSE.txt": "/holiday/static/js/2.1bacfe5f.chunk.js.LICENSE.txt",
     "static/media/index.css": "/holiday/static/media/vitro-pride.edd3bdfe.otf",
-    "static/media/LandingPage.css": "/holiday/static/media/mobile_bg.0e59552e.png"
+    "static/media/LandingPage.css": "/holiday/static/media/mobile_bg.0e59552e.png",
+    "static/media/present1.b7c2f5e5.png": "/holiday/static/media/present1.b7c2f5e5.png",
+    "static/media/present2.73d1d67e.png": "/holiday/static/media/present2.73d1d67e.png",
+    "static/media/present3.d5914c09.png": "/holiday/static/media/present3.d5914c09.png"
   },
   "entrypoints": [
     "static/js/runtime-main.2a4d3e83.js",
     "static/js/2.1bacfe5f.chunk.js",
     "static/css/main.ff33f1ba.chunk.css",
-    "static/js/main.c5dab432.chunk.js"
+    "static/js/main.a8fab3d1.chunk.js"
   ]
 }
