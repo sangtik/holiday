@@ -1,14 +1,15 @@
 .label-container{
-
+    display: inline-flex;
 }
 
-.label-container > div > label {
+.title-box {
     white-space: pre-wrap;
+    text-align: center;
+    /*width: 30%;*/
+    flex: 1 0 35%;
 }
 
-.label-container > div {
-    display: inline-block;
-    text-align: center;
-    width: 20%;
+.contents-box {
     margin-left: 5%;
+    flex: 1 0 60%;
 }

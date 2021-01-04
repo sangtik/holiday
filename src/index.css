@@ -13,7 +13,7 @@ code {
 }
 
 @font-face {
-  font-family: 'VITRO Core';
+  font-family: 'vitro-core';
   font-style: normal;
   font-weight: 100;
   src: url("./style/fonts/vitro-core.woff2") format('woff2'),
@@ -22,10 +22,46 @@ code {
 }
 
 @font-face {
-  font-family: 'VITRO Pride';
+  font-family: 'vitro-pride';
   font-style: normal;
   font-weight: 100;
   src: url("./style/fonts/vitro-pride.woff2") format('woff2'),
   url("./style/fonts/vitro-pride.woff") format('woff'),
   url("./style/fonts/vitro-pride.otf") format('truetype')
+}
+
+@font-face {
+  font-family: 'NanumSquare_acB';
+  font-style: normal;
+  font-weight: 100;
+  src: url("./style/fonts/NanumSquare_acB.woff2") format('woff2'),
+  url("./style/fonts/NanumSquare_acB.woff") format('woff'),
+  url("./style/fonts/NanumSquare_acB.otf") format('truetype')
+}
+
+@font-face {
+  font-family: 'NanumSquare_acEB';
+  font-style: normal;
+  font-weight: 100;
+  src: url("./style/fonts/NanumSquare_acEB.woff2") format('woff2'),
+  url("./style/fonts/NanumSquare_acEB.woff") format('woff'),
+  url("./style/fonts/NanumSquare_acEB.otf") format('truetype')
+}
+
+@font-face {
+  font-family: 'NanumSquare_acL';
+  font-style: normal;
+  font-weight: 100;
+  src: url("./style/fonts/NanumSquare_acL.woff2") format('woff2'),
+  url("./style/fonts/NanumSquare_acL.woff") format('woff'),
+  url("./style/fonts/NanumSquare_acL.otf") format('truetype')
+}
+
+@font-face {
+  font-family: 'NanumSquare_acR';
+  font-style: normal;
+  font-weight: 100;
+  src: url("./style/fonts/NanumSquare_acR.woff2") format('woff2'),
+  url("./style/fonts/NanumSquare_acR.woff") format('woff'),
+  url("./style/fonts/NanumSquare_acR.otf") format('truetype')
 }

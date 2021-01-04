@@ -10,8 +10,8 @@ const AddressBox: React.FC = () => {
           type="address_number"
           placeholder="우편번호"
           required name="address_number"
-          size={10}
-          maxLength={6}
+          size={6}
+          maxLength={8}
         />
         <button>
           주소찾기
@@ -23,7 +23,6 @@ const AddressBox: React.FC = () => {
           type="address_name"
           placeholder="주소"
           required name="address_name"
-          size={20}
           maxLength={30}
         />
         <input
@@ -31,7 +30,6 @@ const AddressBox: React.FC = () => {
           type="address_detail"
           placeholder="상세주소"
           required name="address_detail"
-          size={20}
           maxLength={30}
         />
       </div>

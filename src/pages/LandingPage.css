@@ -2,14 +2,14 @@
     background : url('../resources/images/desktop_bg.png') no-repeat center/cover;
     width: 100%;
     height: 100vh;
-    font-family: "VITRO Pride", sans-serif;
+    font-family: "vitro-pride", sans-serif;
 }
 
 .contents-header {
     display: flex;
     flex-direction: column;
     text-align: center;
-    font-family: "VITRO Core", sans-serif;
+    font-family: "vitro-core", sans-serif;
     margin-left: 5%;
     margin-right: 5%;
     font-size: 2rem;
@@ -37,6 +37,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    min-width: 160px;
     background: -webkit-linear-gradient(left, whitesmoke, burlywood);
     flex: 1 1 50%;
     max-width: 780px;
@@ -45,6 +46,72 @@
 .contents-body_first > div {
     margin-bottom: 5%;
     margin-left: 10%;
+}
+
+.contents-body_second {
+    text-align: center;
+    /*background-color: aliceblue;*/
+    background: -webkit-linear-gradient(right, whitesmoke, lightgoldenrodyellow);
+    flex: 1 1 50%;
+}
+
+.contents-footer {
+    text-align: center;
+    height: 5%;
+    background: -webkit-linear-gradient(bottom, whitesmoke, aquamarine);
+}
+
+@media screen and (max-width: 480px) {
+
+    .container {
+        background : url('../resources/images/mobile_bg.png') no-repeat center/cover;
+        width: 100vw;
+        height: 100vh;
+        font-family: "vitro-core", sans-serif;
+    }
+
+    .contents-header {
+        font-size: 1.5rem;
+    }
+    .contents-body_first > div {
+        margin-left: 0%;
+    }
+}
+
+@media screen and (max-height: 580px) {
+
+    .container {
+        background : url('../resources/images/mobile_bg.png') no-repeat center/cover;
+        width: 100vw;
+        height: 100vh;
+        font-family: "vitro-core", sans-serif;
+    }
+
+    .contents-header {
+        font-size: 1rem;
+        height: 25%;
+    }
+
+    .contents-header > h1 {
+        padding: 0;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    .contents-header > h5 {
+        margin-top: 0;
+    }
+
+    .contents-body {
+        height: 65%;
+    }
+
+    .contents-body_first > div {
+        margin-left: 3%;
+    }
+    .contents-footer {
+        height: 10%;
+    }
 }
 
 /*.contents-body_first label {*/
@@ -67,25 +134,3 @@
 /*.contents-body_first > input:active, input:focus {*/
 /*    border: 2px solid darkkhaki;*/
 /*}*/
-
-.contents-body_second {
-    text-align: center;
-    /*background-color: aliceblue;*/
-    background: -webkit-linear-gradient(right, whitesmoke, lightgoldenrodyellow);
-    flex: 1 1 50%;
-}
-
-.contents-footer {
-    text-align: center;
-    height: 5%;
-    background: -webkit-linear-gradient(bottom, whitesmoke, aquamarine);
-}
-
-@media screen and (max-width: 480px) {
-    .contents-header {
-        font-size: 1.5rem;
-    }
-    .contents-body_first > div {
-        margin-left: 0%;
-    }
-}

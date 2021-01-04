@@ -12,8 +12,8 @@ const LabelBox: React.FC<AddressBoxProps> = ({
 }) => {
   return (
     <div className="label-container">
-      <div><label>{title}</label></div>
-      <div>{children}</div>
+      <div className="title-box">{title}</div>
+      <div className="contents-box">{children}</div>
     </div>
   );
 }

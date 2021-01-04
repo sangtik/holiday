@@ -8,16 +8,16 @@
     display: inline-flex;
 }
 
-.address-container > div:nth-child(2) {
-
-}
+/*.address-top > input {*/
+/*    width: 100%;*/
+/*}*/
 
 .address-container > div:nth-child(1) > button {
 
 }
 
-.address-container > div:nth-child(1) > input {
-
+.address-bottom > input {
+    width: 80%;
 }
 
 

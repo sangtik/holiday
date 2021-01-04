@@ -4,7 +4,13 @@ import './TextBox.css';
 const TextBox: React.FC = () => {
   return (
     <div className="box">
-      <input type="address_number" placeholder="이름" required name="address_number" />
+      <input
+        type="address_number"
+        placeholder="이름"
+        required name="address_number"
+        size={10}
+        maxLength={10}
+      />
     </div>
   );
 }
