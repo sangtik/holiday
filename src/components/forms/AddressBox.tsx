@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './AddressBox.css';
+import AddressModal from './AddressModal';
 
 const AddressBox: React.FC = () => {
+  const [modalVisible, setModalVisible] = useState(false);
+  const handleOpenAddressModal = () => {
+    setModalVisible(true);
+  }
+  const handleCloseAddressModal = () => {
+    setModalVisible(false);
+  }
   return (
     <div className="address-container">
       <div className="address-top">
@@ -13,9 +21,16 @@ const AddressBox: React.FC = () => {
           size={6}
           maxLength={8}
         />
-        <button>
-          주소찾기
-        </button>
+        <button onClick={handleOpenAddressModal}>주소 찾기</button>
+
+        {modalVisible && (
+          <div>
+            <div className="Modal-overlay" onClick={handleCloseAddressModal}/>
+            <div className="Modal">
+              <AddressModal onClose={handleCloseAddressModal} />
+            </div>
+          </div>
+        )}
       </div>
       <div className="address-bottom">
         <input

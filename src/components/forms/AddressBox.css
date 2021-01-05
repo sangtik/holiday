@@ -1,3 +1,24 @@
+.Modal-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.48);
+}
+
+.Modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50vw;
+    height: 50vh;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
+}
+
 .address-container{
     display: inline-flex;
     flex-direction: column;
@@ -8,10 +29,6 @@
     display: inline-flex;
 }
 
-/*.address-top > input {*/
-/*    width: 100%;*/
-/*}*/
-
 .address-container > div:nth-child(1) > button {
 
 }
@@ -21,15 +38,19 @@
 }
 
 
+@media screen and (max-width: 480px) {
+    .Modal {
+        width: 90vw;
+        height: 50vh;
+    }
+}
 
-/*.box input{*/
-/*    margin-left: 2%;*/
-/*}*/
-
-/*.addressBox button{*/
-/*    margin-left: 2%;*/
-/*}*/
-
-/*.addressBox > input:active, input:focus {*/
-/*    border: 2px solid darkkhaki;*/
-/*}*/
+@media screen and (max-height: 580px) {
+    .Modal {
+        position: fixed;
+        top: 50%;
+        width: 80vw;
+        height: 70vh;
+        transform: translate(-50%, -50%);
+    }
+}
