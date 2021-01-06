@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './AddressBox.css';
+import { FaSearchLocation } from 'react-icons/fa';
 import AddressModal from './AddressModal';
 
 const AddressBox: React.FC = () => {
@@ -15,13 +16,15 @@ const AddressBox: React.FC = () => {
       <div className="address-top">
         <input
           className="address_number"
-          type="address_number"
+          type="text"
           placeholder="우편번호"
-          required name="address_number"
+          required name=""
           size={6}
           maxLength={8}
         />
-        <button onClick={handleOpenAddressModal}>주소 찾기</button>
+        <button onClick={handleOpenAddressModal}>
+          <FaSearchLocation />
+        </button>
 
         {modalVisible && (
           <div>
@@ -35,16 +38,16 @@ const AddressBox: React.FC = () => {
       <div className="address-bottom">
         <input
           className="address_name"
-          type="address_name"
+          type="text"
           placeholder="주소"
-          required name="address_name"
+          required name=""
           maxLength={30}
         />
         <input
           className="address_detail"
-          type="address_detail"
+          type="text"
           placeholder="상세주소"
-          required name="address_detail"
+          required name=""
           maxLength={30}
         />
       </div>

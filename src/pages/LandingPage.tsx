@@ -4,8 +4,16 @@ import ImageBorderLayout from '../components/layout/ImageBorderLayout'
 import AddressBox from '../components/forms/AddressBox';
 import TextBox from '../components/forms/TextBox';
 import LabelBox from '../components/forms/LabelBox';
+import axios from 'axios';
 
 const LandingPage: React.FC = () => {
+  // axios({
+  //   url: 'https://test/api/cafe/list/today',
+  //   method: 'get',
+  //   data: {
+  //     foo: 'diary'
+  //   }
+  // });
   return (
       <div className="container">
           <ImageBorderLayout>
@@ -18,36 +26,17 @@ const LandingPage: React.FC = () => {
             </div>
             <div className="contents-body">
               <div className="contents-body_first">
-                <LabelBox
-                  title="받으시는분">
-                  <TextBox />
+                <LabelBox title="받으시는분">
+                  <TextBox placeholder="받으시는분" />
                 </LabelBox>
 
-                <LabelBox
-                  title="연  락  처">
-                  <TextBox />
+                <LabelBox title="연  락  처">
+                  <TextBox placeholder="연락처" />
                 </LabelBox>
 
-                <LabelBox
-                  title="주      소">
+                <LabelBox title="주      소">
                   <AddressBox />
                 </LabelBox>
-
-                {/*<div>*/}
-                {/*  <label> 받으시는분 </label>*/}
-                {/*  <input type="text" placeholder="이름" required name="name" />*/}
-                {/*</div>*/}
-                {/*<div>*/}
-                {/*  <label> 연락처 </label>*/}
-                {/*  <input type="email" placeholder="연락처" required name="email" />*/}
-                {/*</div>*/}
-                {/*<div>*/}
-                {/*  <label> 주소 </label>*/}
-                {/*  <input type="address-number" placeholder="우편번호" required name="address-number" />*/}
-                {/*  <button>주소찾기</button>*/}
-                {/*  <input type="address-name" placeholder="주소" required name="address-name" />*/}
-                {/*  <input type="address-detail" placeholder="상세주소" required name="address-detail" />*/}
-                {/*</div>*/}
               </div>
               <div className="contents-body_second">
                 <div>

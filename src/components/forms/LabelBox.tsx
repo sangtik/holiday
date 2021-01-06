@@ -1,12 +1,12 @@
 import React from 'react';
 import './LabelBox.css';
 
-export interface AddressBoxProps {
+export interface LabelBoxProps {
   children?: any;
   title: string;
 }
 
-const LabelBox: React.FC<AddressBoxProps> = ({
+const LabelBox: React.FC<LabelBoxProps> = ({
   title,
   children
 }) => {

@@ -26,9 +26,7 @@ const AddressModal = ({onClose}: AddressModalProps) => {
 
   return (
     <div className="AddressModal">
-      <div className="content">
-        <DaumPostcode onComplete={handleComplete} />
-      </div>
+      <DaumPostcode onComplete={handleComplete} />
     </div>
   );
 }

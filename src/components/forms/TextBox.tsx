@@ -1,13 +1,19 @@
 import React from 'react';
 import './TextBox.css';
 
-const TextBox: React.FC = () => {
+export interface TextBoxProps {
+  placeholder?: any;
+}
+
+const TextBox: React.FC<TextBoxProps> = ({
+  placeholder,
+}) => {
   return (
-    <div className="box">
+    <div className="text-container">
       <input
-        type="address_number"
-        placeholder="이름"
-        required name="address_number"
+        type="text"
+        placeholder={placeholder}
+        required name=""
         size={10}
         maxLength={10}
       />

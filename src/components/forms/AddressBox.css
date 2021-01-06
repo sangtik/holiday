@@ -23,20 +23,43 @@
     display: inline-flex;
     flex-direction: column;
     flex-wrap: wrap;
+    font-family: "vitro-pride", sans-serif;
 }
 
 .address-container > div:nth-child(1) {
     display: inline-flex;
 }
 
-.address-container > div:nth-child(1) > button {
-
-}
-
-.address-bottom > input {
+.address-container .address-bottom > input {
     width: 80%;
 }
 
+.address-container input {
+    background-color: lightgoldenrodyellow;
+    border: 1px solid khaki;
+    outline: none;
+}
+
+.address-container input:active, input:focus {
+    border: 1px solid darkkhaki;
+}
+
+.address-container button {
+    color: white;
+    background: teal;
+    /*padding: 0.375rem 0.75rem;*/
+    margin-left: 1%;
+    border-radius: 0.25rem;
+    /*font-size: 1rem;*/
+    /*line-height: 1.5;*/
+    border: 1px solid lightseagreen;
+    background: -webkit-linear-gradient(right, teal, lightseagreen);
+}
+
+.address-container button:hover {
+    border: 1px solid lightseagreen;
+    background: -webkit-linear-gradient(left, lightseagreen, lightseagreen);
+}
 
 @media screen and (max-width: 480px) {
     .Modal {

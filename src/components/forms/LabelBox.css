@@ -2,14 +2,24 @@
     display: inline-flex;
 }
 
-.title-box {
+.label-container .title-box {
     white-space: pre-wrap;
     text-align: center;
     /*width: 30%;*/
     flex: 1 0 35%;
 }
 
-.contents-box {
+.label-container .contents-box {
     margin-left: 5%;
     flex: 1 0 60%;
 }
+
+/*.label-container input {*/
+/*    background-color: lightgoldenrodyellow;*/
+/*    border: 2px solid lightgoldenrodyellow;*/
+/*    outline: none;*/
+/*}*/
+
+/*.label-container input:active, input:focus {*/
+/*    border: 2px solid darkkhaki;*/
+/*}*/
