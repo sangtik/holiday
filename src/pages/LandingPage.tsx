@@ -27,6 +27,9 @@ const LandingPage: React.FC = () => {
   })
 
   const onUpdate = (e: any) => {
+    console.log(e.target.name);
+    console.log(e.target.value);
+    console.log(data);
     setData({
       ...data,
       [e.target.name]: e.target.value
@@ -35,17 +38,17 @@ const LandingPage: React.FC = () => {
 
   const onSubmit = () => {
     console.log(data);
-    axios({
-      url: 'http://211.223.105.162:62000/add/data',
-      method: 'GET',
-      data: {
-        name: data.name,
-        phoneNumber: data.mobile,
-        address: data.addressNumber,
-        address2: data.addressName,
-        presentName: data.selectedPresent
-      }
-    });
+    // axios({
+    //   url: 'http://211.223.105.162:62000/add/data',
+    //   method: 'GET',
+    //   data: {
+    //     name: data.name,
+    //     phoneNumber: data.mobile,
+    //     address: data.addressNumber,
+    //     address2: data.addressName,
+    //     presentName: data.selectedPresent
+    //   }
+    // });
   }
 
   return(

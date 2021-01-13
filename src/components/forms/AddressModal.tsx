@@ -2,13 +2,19 @@ import React, { ReactDOM } from 'react';
 import DaumPostcode from 'react-daum-postcode';
 
 type AddressModalProps = {
+  onChange: any;
   onClose: any;
 }
 
-const AddressModal = ({onClose}: AddressModalProps) => {
+const AddressModal = ({
+  onChange,
+  onClose,
+
+}: AddressModalProps) => {
 
   const handleComplete = (data: any) => {
     let fullAddress = data.address;
+    let zonecode = data.zonecode;
     let extraAddress = '';
 
     if (data.addressType === 'R') {
@@ -20,13 +26,15 @@ const AddressModal = ({onClose}: AddressModalProps) => {
       }
       fullAddress += (extraAddress !== '' ? ` (${extraAddress})` : '');
     }
-
+    console.log(zonecode);
     console.log(fullAddress);  // e.g. '서울 성동구 왕십리로2길 20 (성수동1가)'
   }
 
   return (
     <div className="AddressModal">
-      <DaumPostcode onComplete={handleComplete} />
+      <DaumPostcode
+        onComplete={handleComplete}
+      />
     </div>
   );
 }
