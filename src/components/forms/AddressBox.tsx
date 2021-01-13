@@ -3,7 +3,26 @@ import './AddressBox.css';
 import { FaSearchLocation } from 'react-icons/fa';
 import AddressModal from './AddressModal';
 
-const AddressBox: React.FC = () => {
+export interface AddressBoxProps {
+  addressNumber: string,
+  addressName: string,
+  addressDetail: string,
+  name: string,
+  name2: string,
+  name3: string,
+  onChange: any,
+}
+
+const AddressBox: React.FC<AddressBoxProps> = ({
+addressNumber,
+addressName,
+addressDetail,
+name,
+name2,
+name3,
+onChange,
+}) => {
+
   const [modalVisible, setModalVisible] = useState(false);
   const handleOpenAddressModal = () => {
     setModalVisible(true);
@@ -13,14 +32,15 @@ const AddressBox: React.FC = () => {
   }
   return (
     <div className="address-container">
-      <div className="address-top">
+      <div>
         <input
-          className="address_number"
+          name={name}
           type="text"
           placeholder="우편번호"
-          required name=""
           size={6}
           maxLength={8}
+          value={addressNumber}
+          onChange={(e) => onChange(e)}
         />
         <button onClick={handleOpenAddressModal}>
           <FaSearchLocation />
@@ -37,18 +57,20 @@ const AddressBox: React.FC = () => {
       </div>
       <div className="address-bottom">
         <input
-          className="address_name"
+          name={name2}
           type="text"
           placeholder="주소"
-          required name=""
           maxLength={30}
+          value={addressName}
+          onChange={(e) => onChange(e)}
         />
         <input
-          className="address_detail"
+          name={name3}
           type="text"
           placeholder="상세주소"
-          required name=""
           maxLength={30}
+          value={addressDetail}
+          onChange={(e) => onChange(e)}
         />
       </div>
     </div>

@@ -2,7 +2,8 @@
     background : url('../resources/images/desktop_bg.png') no-repeat center/cover;
     width: 100%;
     height: 100vh;
-    font-family: "vitro-pride", sans-serif;
+    font-family: "vitro-core", sans-serif;
+    font-size: 1.5rem;
     z-index: -1;
 }
 
@@ -11,11 +12,11 @@
     flex-direction: column;
     text-align: center;
     font-family: "vitro-core", sans-serif;
-    margin-left: 5%;
-    margin-right: 5%;
-    font-size: 2rem;
+    font-size: 2.5rem;
     height: 35%;
+    background-color: white;
     /*background: -webkit-linear-gradient(top, whitesmoke, aquamarine);*/
+    color: peru;
 }
 
 .contents-header > h1 {
@@ -24,6 +25,9 @@
 }
 
 .contents-header > h5 {
+    font-family: "NanumSquare_acB", sans-serif;
+    font-size: 1.5rem;
+    color: burlywood;
     margin-top: 0;
 }
 
@@ -39,7 +43,8 @@
     flex-direction: column;
     justify-content: center;
     min-width: 160px;
-    background: -webkit-linear-gradient(left, whitesmoke, burlywood);
+    background-color: white;
+    /*background: -webkit-linear-gradient(left, whitesmoke, burlywood);*/
     flex: 1 1 50%;
     max-width: 780px;
 }
@@ -50,16 +55,21 @@
 }
 
 .contents-body_second {
+    display: flex;
     text-align: center;
+    flex-direction: column;
+    justify-content: center;
     /*background-color: aliceblue;*/
-    background: -webkit-linear-gradient(right, whitesmoke, lightgoldenrodyellow);
+    background-color: white;
+    /*background: -webkit-linear-gradient(right, whitesmoke, lightgoldenrodyellow);*/
     flex: 1 1 50%;
 }
 
 .contents-footer {
     text-align: center;
     height: 5%;
-    background: -webkit-linear-gradient(bottom, whitesmoke, aquamarine);
+    background-color: white;
+    /*background: -webkit-linear-gradient(bottom, whitesmoke, aquamarine);*/
 }
 
 @media screen and (max-width: 480px) {
@@ -69,23 +79,31 @@
         width: 100vw;
         height: 100vh;
         font-family: "vitro-core", sans-serif;
+        font-size: 1rem;
     }
 
     .contents-header {
-        font-size: 1.5rem;
+        font-size: 2rem;
+    }
+    .contents-header > h1 {
+        margin-top: 5%;
+    }
+    .contents-header > h5 {
+        font-size: 1.7rem;
+        margin-top: 0;
     }
     .contents-body_first > div {
         margin-left: 0%;
     }
 }
 
-@media screen and (max-height: 580px) {
+@media screen and (max-height: 660px) {
 
     .container {
         background : url('../resources/images/mobile_bg.png') no-repeat center/cover;
         width: 100vw;
         height: 100vh;
-        font-family: "vitro-pride", sans-serif;
+        font-size: 1rem;
     }
 
     .contents-header {
@@ -100,6 +118,7 @@
     }
 
     .contents-header > h5 {
+        font-size: 1rem;
         margin-top: 0;
     }
 
@@ -114,24 +133,3 @@
         height: 10%;
     }
 }
-
-/*.contents-body_first label {*/
-/*    display: inline-block;*/
-/*    background-color: lightgoldenrodyellow;*/
-/*    width: 20%;*/
-/*    max-width: 570px;*/
-/*    font-size: 1.5rem;*/
-/*    outline: none;*/
-/*}*/
-
-/*.contents-body_first input {*/
-/*    background-color: lightgoldenrodyellow;*/
-/*    max-width: 570px;*/
-/*    font-size: 1.5rem;*/
-/*    border: 2px solid lightgoldenrodyellow;*/
-/*    outline: none;*/
-/*}*/
-
-/*.contents-body_first > input:active, input:focus {*/
-/*    border: 2px solid darkkhaki;*/
-/*}*/

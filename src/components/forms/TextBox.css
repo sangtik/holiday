@@ -6,9 +6,11 @@
 }
 
 .text-container input {
-    background-color: lightgoldenrodyellow;
-    border: 1px solid khaki;
+    background-color: peachpuff;
+    border: 1px solid beige;
     outline: none;
+    font-size: 1.5rem;
+    border-radius: 3%;
 }
 
 .text-container input:active, input:focus {
@@ -17,9 +19,13 @@
 
 
 @media screen and (max-width: 480px) {
-
+    .text-container input {
+        font-size: 1rem;
+    }
 }
 
 @media screen and (max-height: 580px) {
-
+    .text-container input {
+        font-size: 1rem;
+    }
 }

@@ -36,9 +36,15 @@
 }
 
 .address-container input {
-    background-color: lightgoldenrodyellow;
-    border: 1px solid khaki;
+    background-color: peachpuff;
+    border: 1px solid beige;
     outline: none;
+    font-size: 1.5rem;
+    border-radius: 3%;
+    /*BORDER-BOTTOM: teal 1px solid;*/
+    /*BORDER-LEFT: medium none;*/
+    /*BORDER-RIGHT: medium none;*/
+    /*BORDER-TOP: medium none;*/
 }
 
 .address-container input:active, input:focus {
@@ -67,6 +73,10 @@
         width: 90vw;
         height: 50vh;
     }
+
+    .address-container input {
+        font-size: 1rem;
+    }
 }
 
 @media screen and (max-height: 580px) {
@@ -76,5 +86,9 @@
         width: 80vw;
         height: 70vh;
         transform: translate(-50%, -50%);
+    }
+
+    .address-container input {
+        font-size: 1rem;
     }
 }
