@@ -1,15 +1,11 @@
 .radio-container{
     display: inline-flex;
-}
-
-.input_hidden{
-    /*position:absolute;*/
-    /*left: -9999px;*/
+    justify-content: center;
 }
 
 .radio-image {
     width: 100%;
-    padding: 20px 40px;
+    padding: 10px 20px;
     background-color: white;
     -webkit-box-shadow: 0px 15px 30px 0px rgba(16,146,147,0.12);
     -moz-box-shadow: 0px 15px 30px 0px rgba(16,146,147,0.12);
@@ -25,6 +21,7 @@
 .radio-hidden:checked ~ .radio-image {
     opacity: 0.6;
     transform: scale(1.1);
+    background-color: lightgrey;
 }
 .radio-hidden {
     position: absolute;
@@ -35,4 +32,18 @@
 }
 .radio-image:hover {
     transform: scale(1.03);
+}
+/*가로*/
+@media screen and (max-width: 480px) {
+    .radio-image {
+        padding: 2%;
+        width: 100%;
+    }
+}
+/*세로*/
+@media screen and (max-height: 580px) {
+    .radio-image {
+        padding: 2%;
+        width: 100%;
+    }
 }

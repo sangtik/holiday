@@ -65,6 +65,12 @@
     flex: 1 1 50%;
 }
 
+.contents-body_second .present-label{
+    width: 70%;
+    margin-bottom: 5%;
+}
+
+
 .contents-footer {
     text-align: center;
     height: 5%;
@@ -95,6 +101,11 @@
     .contents-body_first > div {
         margin-left: 0%;
     }
+
+    .contents-body_second .present-label{
+        margin-bottom: 0;
+    }
+
 }
 
 @media screen and (max-height: 660px) {
@@ -129,6 +140,11 @@
     .contents-body_first > div {
         margin-left: 3%;
     }
+
+    .contents-body_second .present-label{
+
+    }
+
     .contents-footer {
         height: 10%;
     }

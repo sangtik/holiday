@@ -6,6 +6,7 @@ import TextBox from '../components/forms/TextBox';
 import LabelBox from '../components/forms/LabelBox';
 import axios from 'axios';
 import RadioBox from '../components/forms/RadioBox';
+import presentLabel from '../resources/images/presentLabel.png';
 
 const LandingPage: React.FC = () => {
   // axios({d
@@ -35,35 +36,17 @@ const LandingPage: React.FC = () => {
   const onSubmit = () => {
     console.log(data);
     axios({
-      url: 'https://211.223.105.162:62000/add/data',
-      method: 'POST',
+      url: 'http://211.223.105.162:62000/add/data',
+      method: 'GET',
       data: {
         name: data.name,
         phoneNumber: data.mobile,
         address: data.addressNumber,
         address2: data.addressName,
-        address3: data.addressDetail,
         presentName: data.selectedPresent
       }
     });
   }
-
-  // const onSubmit = () => {
-  //   axios({
-  //     url: 'https://reqres.in/api/login',
-  //     method: 'POST',
-  //     data: {
-  //       "email": "eve.holt@reqres.in",
-  //       "password": "cityslicka"
-  //       // name: data.name,
-  //       // phoneNumber: data.mobile,
-  //       // address: data.addressNumber,
-  //       // address2: data.addressName,
-  //       // address3: data.addressDetail,
-  //       // presentName: data.selectedPresent
-  //     }
-  //   });
-  // }
 
   return(
     <div className="container">
@@ -110,7 +93,11 @@ const LandingPage: React.FC = () => {
           </div>
           <div className="contents-body_second">
             <div>
-              <label> 받으실 선물 PICK </label>
+              {/*<label> 받으실 선물 PICK </label>*/}
+              <img
+                src={presentLabel}
+                alt=''
+                className='present-label'/>
             </div>
             <div>
               <RadioBox
@@ -129,3 +116,22 @@ const LandingPage: React.FC = () => {
 }
 
 export default LandingPage;
+
+
+
+// const onSubmit = () => {
+//   axios({
+//     url: 'https://reqres.in/api/login',
+//     method: 'POST',
+//     data: {
+//       "email": "eve.holt@reqres.in",
+//       "password": "cityslicka"
+//       // name: data.name,
+//       // phoneNumber: data.mobile,
+//       // address: data.addressNumber,
+//       // address2: data.addressName,
+//       // address3: data.addressDetail,
+//       // presentName: data.selectedPresent
+//     }
+//   });
+// }
