@@ -24,7 +24,7 @@ onChange,
 }) => {
 
   const [modalVisible, setModalVisible] = useState(false);
-  const [address, setAddressNumber] = useState({
+  const [address, setAddress] = useState({
     addressNumber: addressNumber,
     addressName: addressName,
     addressDetail: addressDetail,
@@ -34,12 +34,19 @@ onChange,
     if (address.addressNumber !== addressNumber
       || address.addressName !== addressName
       || address.addressDetail !== addressDetail)
-      setAddressNumber({
+      setAddress({
         addressNumber: addressNumber,
         addressName: addressName,
         addressDetail: addressDetail,
       })
   })
+
+  const updateAddress = (value: { zoneCode: string, fullAddress: string }) => {
+    addressNumber = value.zoneCode;
+    addressName = value.fullAddress;
+    addressDetail = '';
+    handleCloseAddressModal();
+  }
 
   const handleOpenAddressModal = () => {
     setModalVisible(true);
@@ -57,7 +64,7 @@ onChange,
           placeholder="우편번호"
           size={6}
           maxLength={8}
-          value={address.addressNumber}
+          value={addressNumber}
           onChange={(e) => onChange(e)}
         />
         <button onClick={handleOpenAddressModal}>
@@ -69,7 +76,7 @@ onChange,
             <div className="Modal-overlay" onClick={handleCloseAddressModal}/>
             <div className="Modal">
               <AddressModal
-                onChange={onChange}
+                onChange={updateAddress}
                 onClose={handleCloseAddressModal} />
             </div>
           </div>
@@ -81,7 +88,7 @@ onChange,
           type="text"
           placeholder="주소"
           maxLength={30}
-          value={address.addressName}
+          value={addressName}
           onChange={(e) => onChange(e)}
         />
         <input
