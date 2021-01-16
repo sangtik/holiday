@@ -27,19 +27,34 @@ const LandingPage: React.FC = () => {
   })
 
   const onUpdate = (e: any) => {
-    console.log(e.target.name);
-    console.log(e.target.value);
-    console.log(data);
     setData({
       ...data,
       [e.target.name]: e.target.value
     })
   }
 
+  // const onSubmit = () => {
+  //   console.log(data);
+  //   axios.post('https://9569db48-0fdf-4194-85ad-4b92d28b049d.mock.pstmn.io/add/data', {
+  //     data: {
+  //           name: data.name,
+  //           phoneNumber: data.mobile,
+  //     }
+  //   }).then(r => console.log(r));
+
   const onSubmit = () => {
-    console.log(data);
+    // console.log(data);
+    axios.post('http://localhost:5000/add/data', {
+          name: data.name,
+          phoneNumber: data.mobile,
+          address: data.addressNumber,
+          address2: data.addressName,
+          presentName: data.selectedPresent
+    }).then(r => console.log(r));
+
+    // console.log(data);
     // axios({
-    //   url: 'http://211.223.105.162:62000/add/data',
+    //   url: 'http://localhost:5000/add/data',
     //   method: 'GET',
     //   data: {
     //     name: data.name,
@@ -48,7 +63,7 @@ const LandingPage: React.FC = () => {
     //     address2: data.addressName,
     //     presentName: data.selectedPresent
     //   }
-    // });
+    // }).then(r => console.log(r));
   }
 
   return(
@@ -75,6 +90,7 @@ const LandingPage: React.FC = () => {
             <LabelBox title='연  락  처'>
               <TextBox
                 name='mobile'
+                isTelnum={true}
                 value={data.mobile}
                 onChange={onUpdate}
                 placeholder='연락처'
