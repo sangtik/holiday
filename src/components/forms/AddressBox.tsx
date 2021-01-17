@@ -23,28 +23,47 @@ name3,
 onChange,
 }) => {
 
+  console.log('construct');
   const [modalVisible, setModalVisible] = useState(false);
   const [address, setAddress] = useState({
     addressNumber: addressNumber,
     addressName: addressName,
     addressDetail: addressDetail,
   });
+  console.log(address);
+  //
+  // useEffect(() => {
+  //   if (address.addressNumber !== addressNumber
+  //     || address.addressName !== addressName
+  //     || address.addressDetail !== addressDetail)
+  //     setAddress({
+  //       addressNumber: addressNumber,
+  //       addressName: addressName,
+  //       addressDetail: addressDetail,
+  //     })
+  // })
 
-  useEffect(() => {
-    if (address.addressNumber !== addressNumber
-      || address.addressName !== addressName
-      || address.addressDetail !== addressDetail)
-      setAddress({
-        addressNumber: addressNumber,
-        addressName: addressName,
-        addressDetail: addressDetail,
-      })
-  })
 
-  const updateAddress = (value: { zoneCode: string, fullAddress: string }) => {
-    addressNumber = value.zoneCode;
-    addressName = value.fullAddress;
-    addressDetail = '';
+  const handleAddressChange = (e:any) => {
+    setAddress({
+      ...address,
+      [e.target.name]: e.target.value
+    })
+
+    console.log(address);
+    onChange(address);
+  }
+
+  const onUpdateAddress = (value: { zoneCode: string, fullAddress: string }) => {
+
+    console.log('updateAddress');
+    setAddress({
+      addressNumber: value.zoneCode,
+      addressName: value.fullAddress,
+      addressDetail: '',
+    })
+    onChange(address);
+
     handleCloseAddressModal();
   }
 
@@ -63,9 +82,9 @@ onChange,
           type="text"
           placeholder="우편번호"
           size={6}
-          maxLength={8}
-          value={addressNumber}
-          onChange={(e) => onChange(e)}
+          maxLength={6}
+          value={address.addressNumber}
+          onChange={(e) => handleAddressChange(e)}
         />
         <button onClick={handleOpenAddressModal}>
           <FaSearchLocation />
@@ -76,7 +95,7 @@ onChange,
             <div className="Modal-overlay" onClick={handleCloseAddressModal}/>
             <div className="Modal">
               <AddressModal
-                onChange={updateAddress}
+                onChange={onUpdateAddress}
                 onClose={handleCloseAddressModal} />
             </div>
           </div>
@@ -88,8 +107,8 @@ onChange,
           type="text"
           placeholder="주소"
           maxLength={30}
-          value={addressName}
-          onChange={(e) => onChange(e)}
+          value={address.addressName}
+          onChange={(e) => handleAddressChange(e)}
         />
         <input
           name={name3}
@@ -97,7 +116,7 @@ onChange,
           placeholder="상세주소"
           maxLength={30}
           value={address.addressDetail}
-          onChange={(e) => onChange(e)}
+          onChange={(e) => handleAddressChange(e)}
         />
       </div>
     </div>

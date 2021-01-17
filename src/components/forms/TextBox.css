@@ -7,11 +7,12 @@
 
 .text-container input {
     background-color: peachpuff;
+    font-family: "vitro-pride", sans-serif;
     border: 1px solid beige;
     outline: none;
     font-size: 1.5rem;
     border-radius: 3%;
-    font-family: "vitro-pride", sans-serif;
+    width: 50%;
 }
 
 .text-container input:active, input:focus {

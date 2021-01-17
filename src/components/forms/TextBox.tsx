@@ -6,6 +6,7 @@ export interface TextBoxProps {
   placeholder?: any;
   name?:string;
   isTelnum?:boolean,
+  maxLength?:number,
   onChange: (value: any) => any;
 }
 
@@ -14,6 +15,7 @@ value,
 placeholder,
 onChange,
 isTelnum,
+maxLength,
 name,
 }) => {
   const result = (value: string) => {
@@ -38,6 +40,9 @@ name,
       case 11:
         return `${v.substr(0, 3)}-${v.substr(3, 4)}-${v.substr(7, 4)}`;
 
+      case 12:
+        return `${v.substr(0, 4)}-${v.substr(4, 4)}-${v.substr(8, 5)}`;
+
       default:
         return v;
     }
@@ -50,8 +55,7 @@ name,
         type="text"
         placeholder={placeholder}
         value={isTelnum ? result(value || '') : value || ''}
-        size={10}
-        maxLength={13}
+        maxLength={isTelnum ? 12 : (maxLength || 10)}
         onChange={(e) => onChange(e)}
       />
     </div>

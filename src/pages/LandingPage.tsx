@@ -26,10 +26,24 @@ const LandingPage: React.FC = () => {
     selectedPresent: '1', // 선물 선택 번호
   })
 
-  const onUpdate = (e: any) => {
+  const onDataUpdate = (e: any) => {
+
+    console.log(e.target.name);
+    console.log(e.target.value);
+
     setData({
       ...data,
       [e.target.name]: e.target.value
+    })
+  }
+
+  const onAddressUpdate = (value: any) => {
+
+    setData({
+      ...data,
+      addressNumber: value.addressNumber,
+      addressName: value.addressName,
+      addressDetail: value.addressDetail
     })
   }
 
@@ -82,7 +96,8 @@ const LandingPage: React.FC = () => {
               <TextBox
                 name='name'
                 value={data.name}
-                onChange={onUpdate}
+                maxLength={4}
+                onChange={onDataUpdate}
                 placeholder='받으시는분'
               />
             </LabelBox>
@@ -92,7 +107,7 @@ const LandingPage: React.FC = () => {
                 name='mobile'
                 isTelnum={true}
                 value={data.mobile}
-                onChange={onUpdate}
+                onChange={onDataUpdate}
                 placeholder='연락처'
               />
             </LabelBox>
@@ -105,7 +120,7 @@ const LandingPage: React.FC = () => {
                 addressNumber={data.addressNumber}
                 addressName={data.addressName}
                 addressDetail={data.addressDetail}
-                onChange={onUpdate}
+                onChange={onAddressUpdate}
               />
             </LabelBox>
 
@@ -121,7 +136,7 @@ const LandingPage: React.FC = () => {
             <div>
               <RadioBox
                 name='selectedPresent'
-                onChange={onUpdate}
+                onChange={onDataUpdate}
               />
             </div>
           </div>
